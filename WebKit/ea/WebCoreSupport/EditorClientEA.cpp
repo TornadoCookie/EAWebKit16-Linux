@@ -554,7 +554,7 @@ void EditorClientEA::setInputMethodState(bool active)
 	EA::WebKit::View* pView = m_page->view();
 #if defined(EA_PLATFORM_CONSOLE) || defined(EA_PLATFORM_STADIA)
 	bool onConsole = true;
-#elif defined(EA_PLATFORM_WINDOWS)
+#elif defined(EA_PLATFORM_WINDOWS) || defined(EA_PLATFORM_LINUX)
 	bool onConsole = pView->IsEmulatingConsoleOnPC();
 #elif defined(EA_PLATFORM_OSX)
 	bool onConsole = false;

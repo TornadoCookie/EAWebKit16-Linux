@@ -1,7 +1,7 @@
 Building EA WebKit
 ------------------
 
-This version supports Win32, Win64, XBox One, XboxOneGDK, XBSX, Stadia, PS5 and PS4 platforms.
+This version supports Win32, Win64, XBox One, XboxOneGDK, XBSX, Stadia, PS5, PS4, and Linux platforms.
 
 EA WebKit requires that you have proper development tools installed.  Contact your platform providers to install the proper SDKs.
 
@@ -46,4 +46,13 @@ Developer Requirements
  3. Open the \Projects\PS4\EAWebKit\<EA WebKit Version No>\EAWebKit.sln
  4. Execute Build.
 
+*Linux*
+ 1. Install developer tools
+    EA WebKit requires meson on linux. Install it using your package manager.
+ 2. cd to /Projects/Linux/EAWebKit/<EA WebKit Version No>
+ 3. Configure.
+    $ meson setup build .
+ 4. Build.
+    $ ninja -C build
+    Built shared libaries: EAWebKit.so will be in the build directory.
 

@@ -774,7 +774,7 @@ void PopupMenuEA::OnMouseButtonEvent(const EA::WebKit::MouseButtonEvent& mouseBu
 		// in that situation.
 #if defined(EA_PLATFORM_CONSOLE) || defined(EA_PLATFORM_STADIA)
 		bool onConsole = true;
-#elif defined(EA_PLATFORM_WINDOWS)
+#elif defined(EA_PLATFORM_WINDOWS) || defined(EA_PLATFORM_LINUX)
 		bool onConsole = m_viewEA->IsEmulatingConsoleOnPC();
 #elif defined(EA_PLATFORM_OSX)
 		bool onConsole = false;
