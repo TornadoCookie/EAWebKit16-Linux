@@ -18,7 +18,7 @@ JavaScriptCore: no meson.build yet
 PPMalloc: no meson.build yet
 SQLiteEAWebKit: no meson.build yet
 WTF: no meson.build yet
-cairo: no meson.build yet
+cairo: meson.build created, needs the other dependencies
 coreallocator: no meson.build yet
 libjpegEAWebKit: no meson.build yet
 libpngEAWebKit: no meson.build yet
