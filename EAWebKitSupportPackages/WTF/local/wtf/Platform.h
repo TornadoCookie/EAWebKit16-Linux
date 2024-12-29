@@ -439,7 +439,7 @@
     || defined(unix)        \
     || defined(__unix)      \
     || defined(__unix__))   \
-    && !defined(BUILDING_EA__)
+    && (!defined(BUILDING_EA__) || OS(LINUX))
 #define WTF_OS_UNIX 1
 #endif
 //-EAWebKitChange
