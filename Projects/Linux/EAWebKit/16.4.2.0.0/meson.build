@@ -1340,6 +1340,8 @@ sources = [
 
 cxxflags = [
   '-DBUILDING_EA__=1',
+  '-DEA_PLATFORM_LINUX',
+  '-DBUILDING_EAWEBKIT_DLL=1',
   '-DBUILDING_WebCore',
   '-DBUILDING_WebKit',
   '-Dcairo_public=',
@@ -1360,14 +1362,16 @@ cxxflags = [
   '-DSQLITE_OS_OTHER',
   '-DUNICODE',
   '-DUSE_SYSTEM_MALLOC=1',
-  '-DUTF_USE_EAASERT=1',
+  '-DUTF_USE_EAASSERT=1',
   '-std=c++17',
   '-Og',
   '-Wno-class-memaccess',
   '-Wno-deprecated-declarations',
   '-Wno-changes-meaning',
   '-Wno-c++20-compat',
-  '-Wno-nonnull-compare'
+  '-Wno-nonnull-compare',
+  '-Wno-nonnull',
+  '-Wno-narrowing'
 ]
 
 #4244; 4800; 4530; 4996; 4100; 4127; 4251; 4275; 4324; 4350; 4464; 4482; 4577; 4711; 4746; 4986; 4987; 4819; 
