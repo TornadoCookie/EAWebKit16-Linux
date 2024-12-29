@@ -1362,6 +1362,30 @@ else
   cxxflags += '-DNDEBUG' 
 endif
 
+dependencies = [
+  dependency('cairo', fallback : ['cairo', 'cairo_dep']),
+  dependency('coreallocator', fallback : ['coreallocator', 'coreallocator_dep']),
+  dependency('dirtysock', fallback : ['DirtySDK', 'dirtysock_dep']),
+  dependency('EAAssert', fallback : ['EAAssert', 'EAAssert_dep']),
+  dependency('EABase', fallback : ['EABase', 'EABase_dep']),
+  dependency('EACallstack', fallback : ['EACallstack', 'EACallstack_dep']),
+  dependency('EAIO', fallback : ['EAIO', 'EAIO_dep']),
+  dependency('EAStdC', fallback : ['EAStdC', 'EAStdC_dep']),
+  dependency('EASTL', fallback : ['EASTL', 'EASTL_dep']),
+  dependency('EAText', fallback : ['EAText', 'EAText_dep']),
+  dependency('EAThread', fallback : ['EAThread', 'EAThread_dep']),
+  dependency('FreeType', fallback : ['FreeType', 'FreeType_dep']),
+  dependency('JavaScriptCore', fallback : ['JavaScriptCore', 'JavaScriptCore_dep']),
+  dependency('libjpegEAWebKit', fallback : ['libjpegEAWebKit', 'libjpegEAWebKit_dep']),
+  dependency('libpngEAWebKit', fallback : ['libpngEAWebKit', 'libpngEAWebKit_dep']),
+  dependency('libxml2EAWebKit', fallback : ['libxml2EAWebKit', 'libxml2EAWebKit_dep']),
+  dependency('pixman', fallback : ['pixman', 'pixman_dep']),
+  dependency('PPMalloc', fallback : ['PPMalloc', 'PPMalloc_dep']),
+  dependency('SQLiteEAWebKit', fallback : ['SQLiteEAWebKit', 'SQLiteEAWebKit_dep']),
+  dependency('WTF', fallback : ['WTF', 'WTF_dep']),
+  dependency('zlibEAWebKit', fallback : ['zlibEAWebKit', 'zlibEAWebKit_dep'])
+]
+
 target = shared_library(
   libn,
   sources,

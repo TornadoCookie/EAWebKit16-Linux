@@ -1,5 +1,5 @@
 
-project('cairo', 'c', version : '1.12.14')
+project('cairo', 'c', version : 'local-1.12.14')
 
 # EAWebKit.vcxproj
 
@@ -150,7 +150,8 @@ target = shared_library(
   libn,
   sources,
   cpp_args : cxxflags,
-  include_directories: includes
+  include_directories: includes,
+  dependencies: dependencies
 )
 
 project_dep = declare_dependency(
