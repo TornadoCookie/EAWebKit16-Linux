@@ -1,0 +1,27 @@
+This is a port of EAWebKit version 16.4.2.0.0 to Linux Desktop.
+Much of the actual porting work needed for this has been done as EAWebKit supports Google Stadia, which used Linux as its server OS.
+Most of the work of this port is making it build on Linux.
+
+Progress
+DirtySDK: no meson.build yet
+EAAssert: no meson.build yet
+EABase: no meson.build yet
+EACallstack: no meson.build yet
+EAIO: no meson.build yet
+EASTL: no meson.build yet
+EAStdC: no meson.build yet
+EAText: no meson.build yet
+EAThread: no meson.build yet
+EAWebKit: compiles 100%, needs the other dependencies
+FreeType: no meson.build yet
+JavaScriptCore: no meson.build yet
+PPMalloc: no meson.build yet
+SQLiteEAWebKit: no meson.build yet
+WTF: no meson.build yet
+cairo: no meson.build yet
+coreallocator: no meson.build yet
+libjpegEAWebKit: no meson.build yet
+libpngEAWebKit: no meson.build yet
+libxml2EAWebKit: no meson.build yet
+pixman: no meson.build yet
+zlibEAWebKit: no meson.build yet
