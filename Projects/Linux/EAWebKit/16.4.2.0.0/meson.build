@@ -1,29 +1,6 @@
 
 project('EAWebKit', 'cpp', version : '16.4.2.0.0')
 
-# Subprojects
-# Note: Even though many of these may have system package variants, we will use the embedded ones as they may have some modifications.
-#cairo = subproject('../../cairo/local-1.12.14')
-#coreallocator = subproject('../../coreallocator/local_1.04.05')
-#dirtysock = subproject('../../DirtySDK/local_15.1.6.0.5')
-#EAAssert = subproject('../../EAAssert/local_1.05.11')
-#EABase = subproject('../../EABase/local_2.10.01')
-#EACallstack = subproject('../../EACallstack/local_2.03.04')
-#EAIO = subproject('../../EAIO/local_3.01.13')
-#EAStdC = subproject('../../EASTL/local_3.16.05')
-#EAText = subproject('../../EAText/local_1.21.00')
-#EAThread = subproject('../../EAThread/local_1.33.04')
-#FreeType = subproject('../../FreeType/local_2.9.0.02')
-#JavaScriptCore = subproject('../../JavaScriptCore/local')
-#libjpegEAWebKit = subproject('../../libjpegEAWebKit/local-1.00.06-01')
-#libpngEAWebKit = subproject('../../libpngEAWebKit/local-1.01.00-01')
-#libxml2EAWebKit = subproject('../../libxml2EAWebKit/local-1.00.06')
-#pixman = subproject('../../pixman/local-0.28.2')
-#PPMalloc = subproject('../../PPMalloc/local_1.26.11')
-#SQLiteEAWebKit = subproject('../../SQLiteEAWebKit/local')
-#WTF = subproject('../../WTF/local')
-#zlibEAWebKit = subproject('../../zlibEAWebKit/local-1.2.5-7-01')
-
 # EAWebKit.vcxproj
 
 includes = include_directories(
