@@ -1,5 +1,5 @@
 This is a port of EAWebKit version 16.4.2.0.0 to Linux Desktop.
-Much of the actual porting work needed for this has been done as EAWebKit supports Google Stadia, which used Linux as its server OS.
+Much of the actual porting work needed for this has been done as EAWebKit supports Google Stadia, which used Debian as its server OS.
 Most of the work of this port is making it build on Linux.
 
 Progress
