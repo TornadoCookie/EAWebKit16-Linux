@@ -49,10 +49,9 @@ Developer Requirements
 *Linux*
  1. Install developer tools
     EA WebKit requires meson on linux. Install it using your package manager.
- 2. cd to /Projects/Linux/EAWebKit/<EA WebKit Version No>
+ 2. cd to /Projects/Linux
  3. Configure.
     $ meson setup build .
  4. Build.
     $ ninja -C build
-    Built shared libaries: EAWebKit.so will be in the build directory.
 
