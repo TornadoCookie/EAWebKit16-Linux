@@ -60,8 +60,12 @@ sources = [
 
 cflags = [
   '-DHAVE_CONFIG_H',
+  '-DHAVE_FCNTL_H',
+  '-DHAVE_MATH_H',
+  '-DHAVE_FLOAT_H',
   '-DLIBXML_STATIC',
-  '-DNOLIBTOOL'
+  '-DNOLIBTOOL',
+  '-Wno-incompatible-pointer-types'
 ]
 
 libn = meson.project_name()

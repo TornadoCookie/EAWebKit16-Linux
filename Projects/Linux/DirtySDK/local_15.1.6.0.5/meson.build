@@ -110,6 +110,7 @@ sources = [
 ]
 
 cflags = [
+  '-D_GNU_SOURCE',
   '-Wno-multichar'
 ]
 

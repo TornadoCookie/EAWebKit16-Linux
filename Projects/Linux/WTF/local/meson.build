@@ -20,8 +20,7 @@ headers = [
 ]
 
 sources = [
-    
-'../../../../EAWebKitSupportPackages/WTF/local/wtf/Assertions.cpp',
+    '../../../../EAWebKitSupportPackages/WTF/local/wtf/Assertions.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/BitVector.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/CompilationThread.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/CryptographicallyRandomNumber.cpp',
@@ -58,6 +57,7 @@ sources = [
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/StackBounds.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/StringPrintStream.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/Threading.cpp',
+    '../../../../EAWebKitSupportPackages/WTF/local/wtf/ThreadingPthreads.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/WordLock.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/WorkQueue.cpp',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/WTFThreadData.cpp',
@@ -102,6 +102,11 @@ cxxflags = [
   '-DUNICODE',
   '-DWTF_USE_DIRTYSDK=0',
   '-DWTF_USE_EATEXT=0',
+  '-DASSERT_DISABLED=1',
+  '-DASSERT_MSG_DISABLED=1',
+  '-DASSERT_ARG_DISABLED=1',
+  '-DFATAL_DISABLED=1',
+  '-DERROR_DISABLED=1',
   '-std=c++17',
   '-Og',
   '-Wno-class-memaccess',

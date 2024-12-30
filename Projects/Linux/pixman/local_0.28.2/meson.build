@@ -44,10 +44,10 @@ sources = [
 
 ]
 
-cxxflags = [
-    '-DPACKAGE_BUGREPORT=',
-    '-DPACKAGE_VERSION=',
+cflags = [
     '-DPACKAGE=pixman',
+    '-DPACKAGE_BUGREPORT=',
+    '-DPACKAGE_VERSION=', 
     '-DPIXMAN_NO_TLS',
     '-DUSE_SSE2',
     '-std=c++17'
@@ -56,19 +56,19 @@ cxxflags = [
 libn = meson.project_name()
 
 if get_option('buildtype') == 'debug'
-  cxxflags += '-D_DEBUG'
-  cxxflags += '-DEA_DEBUG'
+  cflags += '-D_DEBUG'
+  cflags += '-DEA_DEBUG'
 else
-  cxxflags += '-DNDEBUG' 
+  cflags += '-DNDEBUG' 
 endif
 
 dependencies = [
 ]
 
-target = shared_library(
+target = static_library(
   libn,
   sources,
-  cpp_args : cxxflags,
+  c_args : cflags,
   include_directories: includes,
   dependencies: dependencies
 )
