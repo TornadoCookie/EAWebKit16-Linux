@@ -621,7 +621,11 @@
 #define HAVE_STRINGS_H 1
 #define HAVE_SYS_PARAM_H 1
 #define HAVE_SYS_TIME_H 1 
+
+#if !defined(BUILDING_EA__)
 #define USE_PTHREADS 1
+#endif
+
 #endif /* OS(UNIX) */
 
 #if (OS(FREEBSD) || OS(OPENBSD)) && !defined(__GLIBC__)
