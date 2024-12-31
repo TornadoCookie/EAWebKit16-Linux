@@ -68,7 +68,7 @@ endif
 dependencies = [
 ]
 
-target = shared_library(
+target = static_library(
   libn,
   sources,
   c_args : cflags,

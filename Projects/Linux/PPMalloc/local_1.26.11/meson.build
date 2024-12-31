@@ -61,7 +61,7 @@ dependencies = [
   dependency('EAThread', fallback : ['EAThread', 'EAThread_dep'])
 ]
 
-target = shared_library(
+target = static_library(
   libn,
   sources,
   cpp_args : cxxflags,
