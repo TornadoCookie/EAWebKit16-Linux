@@ -37,6 +37,7 @@ sources = [
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-region16.c',
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-region32.c',
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-solid-fill.c',
+    '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-sse2.c',
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-timer.c',
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-trap.c',
     '../../../../EAWebKitSupportPackages/pixman/local-0.28.2/source/pixman-utils.c',
