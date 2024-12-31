@@ -747,7 +747,8 @@
     && (CPU(X86) || CPU(X86_64) || CPU(ARM) || CPU(ARM64) || CPU(MIPS)) \
     && !CPU(APPLE_ARMV7K) \
     && !defined(EA_PLATFORM_CONSOLE) \
-    && !defined(EA_PLATFORM_STADIA)
+    && !defined(EA_PLATFORM_STADIA)  \
+    && !defined(EA_PLATFORM_LINUX)
 #define ENABLE_JIT 1
 #endif
 //-EAWebKitChange
