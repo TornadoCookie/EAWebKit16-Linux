@@ -119,8 +119,9 @@ sources = [
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/bytecode/Watchpoint.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/bytecompiler/BytecodeGenerator.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/bytecompiler/NodesCodegen.cpp',
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/debugger/Debugger.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/debugger/Debugger.cpp', 
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/debugger/DebuggerCallFrame.cpp', 
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/debugger/DebuggerScope.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/dfg/DFGAbstractHeap.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/dfg/DFGAbstractValue.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/dfg/DFGAdaptiveInferredPropertyValueWatchpoint.cpp',
@@ -673,10 +674,11 @@ if get_option('buildtype') == 'debug'
   cxxflags += '-D_DEBUG'
   cxxflags += '-DEA_DEBUG'
   sources += [
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/pc64/dev-debug/InspectorBackendDispatchers.cpp',
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/pc64/dev-debug/InspectorFrontendDispatchers.cpp',
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/pc64/dev-debug/InspectorProtocolObjects.cpp',
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/pc64/dev-debug/JSCBuiltins.cpp'
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/InspectorBackendDispatchers.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/InspectorFrontendDispatchers.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/InspectorProtocolObjects.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/JSCBuiltins.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/JSReplayInputs.cpp'
   ]
 else
   cxxflags += '-DNDEBUG' 
@@ -688,7 +690,7 @@ dependencies = [
   dependency('WTF', fallback : ['WTF', 'WTF_dep'])
 ]
 
-target = shared_library(
+target = static_library(
   libn,
   sources,
   cpp_args : cxxflags,
