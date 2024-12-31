@@ -26,17 +26,17 @@ sources = [
     
 ]
 
-cxxflags = [
+cflags = [
     '-DMY_ZCALLOC',
 ]
 
 libn = meson.project_name()
 
 if get_option('buildtype') == 'debug'
-  cxxflags += '-D_DEBUG'
-  cxxflags += '-DEA_DEBUG'
+  cflags += '-D_DEBUG'
+  cflags += '-DEA_DEBUG'
 else
-  cxxflags += '-DNDEBUG' 
+  cflags += '-DNDEBUG' 
 endif
 
 dependencies = [
@@ -45,7 +45,7 @@ dependencies = [
 target = static_library(
   libn,
   sources,
-  cpp_args : cxxflags,
+  c_args : cflags,
   include_directories: includes,
   dependencies: dependencies
 )
