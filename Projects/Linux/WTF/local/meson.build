@@ -102,13 +102,8 @@ cxxflags = [
   '-DUNICODE',
   '-DWTF_USE_DIRTYSDK=0',
   '-DWTF_USE_EATEXT=0',
-  '-DASSERT_DISABLED=1',
-  '-DASSERT_MSG_DISABLED=1',
-  '-DASSERT_ARG_DISABLED=1',
-  '-DFATAL_DISABLED=1',
-  '-DERROR_DISABLED=1',
   '-std=c++17',
-  '-Og',
+  '-O2',
   '-Wno-class-memaccess',
   '-Wno-changes-meaning'
 ]
@@ -127,17 +122,17 @@ dependencies = [
   dependency('EABase', fallback : ['EABase', 'EABase_dep']),
 ]
 
-target = static_library(
+wtf_target = static_library(
   libn,
   sources,
   cpp_args : cxxflags,
   include_directories: includes
 )
 
-project_dep = declare_dependency(
+wtf_project_dep = declare_dependency(
   include_directories: headers,
-  link_with : target
+  link_with : wtf_target
 )
 
-set_variable(meson.project_name() + '_dep', project_dep)
+set_variable(meson.project_name() + '_dep', wtf_project_dep)
 
