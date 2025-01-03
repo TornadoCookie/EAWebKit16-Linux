@@ -127,8 +127,10 @@ sources = [
 
 cflags = [
     '-DCAIRO_DISABLE_TMPFILE',
-    '-DCAIRO_NO_MUTEX=1',
+    '-DCAIRO_HAS_PTHREAD=1',
     '-Dcairo_public=',
+    '-DHAVE_STDINT_H=1',
+    '-DHAVE_UINT64_T=1'
 ]
 
 libn = meson.project_name()
