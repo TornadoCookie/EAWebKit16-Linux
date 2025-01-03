@@ -6,11 +6,18 @@ on:
       - "**.c"
       - "**.cpp"
       - "**.h"
+      - "**.hpp"
+      - "**/meson.build"
   pull_request:
     paths:
       - "**.c"
       - "**.cpp"
       - "**.h"
+      - "**.hpp"
+      - "**/meson.build"
+  workflow_dispatch:
+    
+
 
 jobs:
   build:
