@@ -50,8 +50,7 @@ cflags = [
     '-DPACKAGE_BUGREPORT=',
     '-DPACKAGE_VERSION=', 
     '-DPIXMAN_NO_TLS',
-    '-DUSE_SSE2',
-    '-std=c++17'
+    '-DUSE_SSE2'
 ]
 
 libn = meson.project_name()
