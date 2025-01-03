@@ -37,9 +37,11 @@ jobs:
       - name: Install dependencies
         run: python -m pip install meson==${{ matrix.meson_version }} ninja
       - name: Configure Project
-        run: cd Projects/Linux && meson setup . build
+        run: meson setup Projects/Linux Projects/Linux/build
         env:
           CC: gcc
+      - name: Build Project
+        run: ninja -C Projects/Linux/build
       #- name: Run Tests
       #  run: meson test -C builddir/ -v
       #- name: Upload Test Log
