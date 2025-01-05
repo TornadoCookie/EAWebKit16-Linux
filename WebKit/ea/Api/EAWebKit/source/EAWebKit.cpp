@@ -1582,7 +1582,7 @@ void ClearSurfaceToColor(ISurface *surface, WebCore::Color color)
 } // WebKit
 } // EA
 
-#if !defined(EA_PLATFORM_MICROSOFT) && !defined(EA_PLATFORM_STADIA)
+#if !defined(EA_PLATFORM_MICROSOFT) && !defined(EA_PLATFORM_STADIA) && !defined(EA_PLATFORM_LINUX)
 extern "C" char* getenv(const char* param)
 {
     (void)param;
