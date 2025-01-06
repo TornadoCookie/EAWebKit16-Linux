@@ -10,7 +10,7 @@ includes = include_directories(
     '../../../../EAWebKitSupportPackages/EAAssert/local_1.05.11/include',
     '../../../../EAWebKitSupportPackages/EAStdC/local_1.26.08/include',
     '../../../../EAWebKitSupportPackages/coreallocator/local_1.04.05/include',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include'
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include'
 )
 
 headers = include_directories(

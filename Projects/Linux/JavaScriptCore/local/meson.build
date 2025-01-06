@@ -33,7 +33,7 @@ includes = include_directories(
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/yarr',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug',
     '../../../../EAWebKitSupportPackages/EABase/local_2.10.01/include/Common',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include',
     '../../../../EAWebKitSupportPackages/WTF/local',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/ea',
     '../../../../EAWebKitSupportPackages/WTF/local/wtf/ea/icu'

@@ -116,7 +116,7 @@ includes = include_directories(
 	'../../../../EAWebKitSupportPackages/EAAssert/local_1.05.11/include',
 	'../../../../EAWebKitSupportPackages/EAStdC/local_1.26.08/include',
 	'../../../../EAWebKitSupportPackages/coreallocator/local_1.04.05/include',
-	'../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include',
+	'../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include',
 	'../../../../EAWebKitSupportPackages/EAIO/local_3.01.13/include',
 	'../../../../EAWebKitSupportPackages/FreeType/local_2.9.0.02/installed/include',
 	'../../../../EAWebKitSupportPackages/PPMalloc/local_1.26.11/include',
@@ -1360,6 +1360,7 @@ libn = meson.project_name()
 if get_option('buildtype') == 'debug'
   libn += 'd'
   cxxflags += '-D_DEBUG'
+  cxxflags += '-DEA_DEBUG=1'
   sources += [
     '../../../../WebCore/DerivedSources/linux/dev-debug/ColorData.cpp',
     '../../../../WebCore/DerivedSources/linux/dev-debug/CSSGrammar.cpp',
@@ -1453,7 +1454,8 @@ target = shared_library(
   sources,
   cpp_args : cxxflags,
   include_directories: includes,
-  dependencies : dependencies
+  dependencies : dependencies,
+  #  link_args: ['-lasan']
 )
 
 

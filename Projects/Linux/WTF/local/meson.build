@@ -103,7 +103,6 @@ cxxflags = [
   '-DWTF_USE_DIRTYSDK=0',
   '-DWTF_USE_EATEXT=0',
   '-std=c++17',
-  '-O2',
   '-Wno-class-memaccess',
   '-Wno-changes-meaning'
 ]

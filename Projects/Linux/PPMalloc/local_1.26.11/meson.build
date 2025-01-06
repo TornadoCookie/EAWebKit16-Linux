@@ -9,7 +9,7 @@ includes = include_directories(
     '../../../../EAWebKitSupportPackages/EABase/local_2.10.01/include/Common',
     '../../../../EAWebKitSupportPackages/EAThread/local_1.33.04/include',
     '../../../../EAWebKitSupportPackages/coreallocator/local_1.04.05/include',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include',
     '../../../../EAWebKitSupportPackages/EACallstack/local_2.03.04/include'
 )
 

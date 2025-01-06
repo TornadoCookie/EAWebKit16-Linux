@@ -1,11 +1,11 @@
 
-project('EASTL', 'cpp', version : 'local_3.16.05')
+project('EASTL', 'cpp', version : 'local_3.21.23')
 
 # EASTL.vcxproj
 
 includes = include_directories(
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source',
     '../../../../EAWebKitSupportPackages/EABase/local_2.10.01/include/Common',
     '../../../../EAWebKitSupportPackages/EAThread/local_1.33.04/include',
     '../../../../EAWebKitSupportPackages/EAAssert/local_1.05.11/include',
@@ -14,19 +14,19 @@ includes = include_directories(
 )
 
 headers = include_directories(
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/include'
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include'
 )
 
 sources = [  
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/allocator_eastl.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/assert.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/fixed_pool.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/hashtable.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/intrusive_list.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/numeric_limits.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/red_black_tree.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/string.cpp',
-    '../../../../EAWebKitSupportPackages/EASTL/local_3.16.05/source/thread_support.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/allocator_eastl.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/assert.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/fixed_pool.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/hashtable.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/intrusive_list.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/numeric_limits.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/red_black_tree.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/string.cpp',
+    '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/source/thread_support.cpp',
 ]
 
 cxxflags = [
