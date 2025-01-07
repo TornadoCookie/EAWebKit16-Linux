@@ -1361,6 +1361,7 @@ if get_option('buildtype') == 'debug'
   libn += 'd'
   cxxflags += '-D_DEBUG'
   cxxflags += '-DEA_DEBUG=1'
+  cxxflags += '-DEAWEBKIT_MEMORY_DEBUG=1'
   sources += [
     '../../../../WebCore/DerivedSources/linux/dev-debug/ColorData.cpp',
     '../../../../WebCore/DerivedSources/linux/dev-debug/CSSGrammar.cpp',
