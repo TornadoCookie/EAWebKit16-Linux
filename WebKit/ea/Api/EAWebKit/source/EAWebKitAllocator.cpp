@@ -59,11 +59,13 @@ inline DWORD protection(bool writable, bool executable)
 }
 #endif
 
-#if defined(EA_PLATFORM_OSX)
+#if defined(EA_PLATFORM_UNIX)
 #include <unistd.h>
 #include <sys/mman.h>
+#if defined(EA_PLATFORM_OSX)
 #include <mach/mach_init.h>
 #include <mach/vm_map.h>
+#endif
 #endif
 namespace EA
 {
@@ -143,7 +145,7 @@ class DefaultAllocator : public Allocator
 	// OS memory management API.
 	bool SupportsOSMemoryManagement()
 	{
-#if defined(EA_PLATFORM_WINDOWS) || defined(EA_PLATFORM_OSX)
+#if defined(EA_PLATFORM_WINDOWS) || defined(EA_PLATFORM_OSX) || defined(EA_PLATFORM_LINUX)
 		return true;
 #else
 		return false;
@@ -171,7 +173,7 @@ class DefaultAllocator : public Allocator
 		void* result = VirtualAlloc(0, bytes, MEM_RESERVE, protection(writable, executable));
  		EAW_ASSERT_MSG(result, "VirtualAlloc failed");
 		return result;
-#elif defined(EA_PLATFORM_OSX)
+#elif defined(EA_PLATFORM_OSX) || defined(EA_PLATFORM_LINUX)
         int protection = PROT_READ;
         if (writable)
             protection |= PROT_WRITE;
@@ -301,7 +303,7 @@ class DefaultAllocator : public Allocator
 		void* result = VirtualAlloc(address, bytes, MEM_COMMIT, protection(writable, executable));
 		(void) result;
 		EAW_ASSERT_MSG(result, "VirtualAlloc failed");
-#elif defined(EA_PLATFORM_OSX)
+#elif defined(EA_PLATFORM_OSX) || defined(EA_PLATFORM_LINUX)
         // Nothing to do here. All the memory through mmap is already committed.
 #else
 		EAW_ASSERT_MSG(false, "commit not supported");
