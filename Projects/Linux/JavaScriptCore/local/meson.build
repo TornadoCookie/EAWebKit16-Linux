@@ -31,7 +31,7 @@ includes = include_directories(
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/tools',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/wasm',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/yarr',
-    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug',
+    
     '../../../../EAWebKitSupportPackages/EABase/local_2.10.01/include/Common',
     '../../../../EAWebKitSupportPackages/EASTL/local_3.21.23/include',
     '../../../../EAWebKitSupportPackages/WTF/local',
@@ -679,8 +679,19 @@ if get_option('buildtype') == 'debug'
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/JSCBuiltins.cpp',
     '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug/JSReplayInputs.cpp'
   ]
+
+  includes = [includes, include_directories('../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-debug')]
 else
-  cxxflags += '-DNDEBUG' 
+  cxxflags += '-DNDEBUG'
+  sources += [
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt/InspectorBackendDispatchers.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt/InspectorFrontendDispatchers.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt/InspectorProtocolObjects.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt/JSCBuiltins.cpp',
+    '../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt/JSReplayInputs.cpp'
+  ]
+
+  includes = [includes, include_directories('../../../../EAWebKitSupportPackages/JavaScriptCore/local/JavaScriptCore/DerivedSources/linux/dev-opt')]
 endif
 
 dependencies = [
